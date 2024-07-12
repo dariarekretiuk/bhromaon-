@@ -1,0 +1,277 @@
+@import "vars";
+@import "mixins";
+@import "media-quer";
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0 auto;
+    padding: 10px;
+}
+ header, footer{
+    padding-left: calc(50vw/4);
+    padding-right: calc(50vw/4);
+}   
+
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: $main_white;
+    padding-top: 100px;
+    background-image: url("../img/section1.png");
+    width: 100%;
+    // padding-top: calc(100vw/7);
+    // padding-bottom: calc(100vw/7);
+    // height: calc(100vw/1.9);
+    height: 100vh;
+}
+.title{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 26px;
+    margin-bottom: 0px;
+    &_safe{ 
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 6.8px;
+        margin-bottom: 60px;
+    }
+}
+input[type=text]{
+    height: 63px;
+    width: 503px;
+    padding-left: 50px;
+    margin-bottom: 100px;
+    border: 2px solid $main_white;
+    // position: relative;
+}
+.blue_but{
+    font-size: 14px;
+    height: 63px;
+    width: 153px;
+    left: 500px;
+    background: $main_blue;
+    color: $main_white;
+    border: 0px solid;
+    left: 73%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    &:hover{
+        transition: 2s;
+        text-decoration: underline;
+    }
+}
+.white{
+    border: 2px solid $main_white;
+    height: 63px;
+    padding-right: 35px;
+    position: absolute;
+    margin-top: 0;
+}
+.white::after{
+    position: absolute;
+    content: url("../img/svg/search_but.svg");
+    top: 18px;
+    left: 100px;
+}
+.search{
+    position: relative;
+}
+.scroll{
+    font-family: Josefin Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 2.8px;
+    position: relative;
+}
+.scroll::after{
+    position: absolute;
+    content: url("../img/svg/treu.svg");
+    left: 45px;
+    top: 20px;
+}
+.header{
+    @include df
+    background-color: $main_blue;
+    color: #FFFFFF;
+    position: relative;
+    
+    &_nav{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+        &_item{
+            list-style: none;
+            margin: 19px;
+            font-size: 14px;
+            
+        }
+        &_link{
+            text-decoration: none;
+            color: $main_white;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.why{
+    @include df
+    padding: 0 calc(50vw/4);
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image: url("../img/why.png");
+    &_inf{
+        max-width: 560px;
+        margin-right: 80px;
+    }
+    &_title{
+        color: $main_white;
+        font-size: 36px;
+        font-weight: 400;
+    }
+    &_text{
+        color: #E8E8E8;
+        font-size: 16px;
+        margin: 20px 0;
+    }
+}
+.mount{
+    margin-left: 70px;
+}
+.select{
+    @include df;
+    justify-content: space-around;
+    padding: 0 calc(50vw/4);
+    padding-top:150px;
+    padding-bottom: 60px;
+    background-color: #333333;
+    position: relative;
+    
+    &_img{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        white-space: nowrap;
+    }
+}
+.select::after{
+    content: url("../img/line.png");
+    position: absolute;
+    top: 50px;
+}
+.right{
+    margin-right: 350px;
+}
+.left{
+    margin-left: 350px;
+}
+.spain, .spain2{
+    @include df;
+    background-image: url("../img/spain.png");
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+.spain{
+    padding-right: calc(50vw);
+    padding-left: calc(50vw/4);
+    
+}
+.spain2{
+    background-image: url("../img/spain2.png");
+    padding-left: calc(50vw);
+    padding-right: calc(50vw/4);
+    
+}
+.black{
+    // margin-left: 50px;
+    padding: 30px;
+    max-width: 543px;
+    max-height: 374px;
+    background-image: url("../img/black.png");
+    color: $main_white;
+    
+
+}
+.black2{
+    // margin-right: 50px;
+    padding: 30px;
+    max-width: 543px;
+    max-height: 374px;
+    background-image: url("../img/black.png");
+    color: $main_white;
+}
+.tourist{
+    // @include df;
+    background-image: url("../img/sam.png");
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: $main_white;
+    padding-left: calc(50vw/4);
+    padding-right: calc(50vw/4);
+    &_title{
+        text-align: center;
+        font-size: 36px;
+    }
+}
+.sam{
+    @include df;
+    align-items: center;
+    margin-top: 50px;
+    &_inf{
+        background-color: #333333;
+        width: 668px;
+        padding: 30px;
+        height: 287px;
+    }
+    &_pic{
+        max-width: 445px;
+    }
+    &_text{
+        position: relative;
+        text-indent: 40px;
+        &:before{
+            position: absolute;
+            content: "\201c";
+            font-size: 100px;
+            border: black;
+            color: $main_blue;
+            left: -40px;
+            top: -10px;
+            font-family: 'Josefin Sans';
+        }
+    }
+}
+
+.footer{
+    text-align: center;
+    background-color: #232323;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    color: $main_white;
+}
+.social{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline-start: 0;
+    &_item{
+        margin: 10px;
+    }
+}
+.nav {
+    &__burger,
+    &__burger-img {
+      display: none;
+    }
+  }
+  
